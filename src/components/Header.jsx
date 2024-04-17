@@ -1,4 +1,5 @@
 import { brainwave } from "../assets";
+import Button from "./Button";
 
 
 const Header = () => {
@@ -33,6 +34,9 @@ const Header = () => {
           </div>
         </nav>
     </div>
+    <Button className="hidden lg:flex" href="#login">
+          Sign in
+        </Button>
     </div>
   )
 }
