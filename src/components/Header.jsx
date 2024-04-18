@@ -1,5 +1,6 @@
 import { brainwave } from "../assets";
 import Button from "./Button";
+import MenuSvg from "../assets/svg/MenuSvg";
 
 
 const Header = () => {
@@ -36,6 +37,13 @@ const Header = () => {
     </div>
     <Button className="hidden lg:flex" href="#login">
           Sign in
+        </Button>
+        <Button
+          className="ml-auto lg:hidden"
+          px="px-3"
+          onClick={toggleNavigation}
+        >
+          <MenuSvg openNavigation={openNavigation} />
         </Button>
     </div>
   )
