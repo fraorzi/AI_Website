@@ -1,9 +1,24 @@
 import { brainwave } from "../assets";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
+import { useState } from "react";
 
 
 const Header = () => {
+
+  const [openNavigation, setOpenNavigation] = useState(false);
+
+  const toggleNavigation = () => {
+    if (openNavigation) {
+      setOpenNavigation(false);
+      enablePageScroll();
+    } else {
+      setOpenNavigation(true);
+      disablePageScroll();
+    }
+  };
+
+
   return (
     <div className="fixed top-0 z-50 bg-n-8/90 backdrop-blur-sm border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm">
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
