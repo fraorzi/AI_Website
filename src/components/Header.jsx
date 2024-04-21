@@ -2,9 +2,12 @@ import { brainwave } from "../assets";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 
 const Header = () => {
+
+  const pathname = useLocation();
 
   const [openNavigation, setOpenNavigation] = useState(false);
 
