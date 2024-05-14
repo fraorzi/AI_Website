@@ -7,10 +7,18 @@ import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
 
 const Hero = () => {
+
+  const parallaxRef = useRef(null);
+
   return (
-    <div>
-      
-    </div>
+    <Section
+      className="pt-[12rem] -mt-[5.25rem]"
+      crosses
+      crossesOffset="lg:translate-y-[5.25rem]"
+      customPaddings
+      id="hero"
+    >
+     </Section> 
   )
 }
 
